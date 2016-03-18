@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ android:orientation="vertical"
+    tools:context="com.mobilesafe.AppLockEnterPwdActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入程序锁密码"
+        android:textSize="35sp"
+        android:background="@android:color/holo_blue_bright"
+        android:alpha="0.65"
+        android:gravity="center"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dip">
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_marginTop="3dip"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/iv_app_icon"
+            android:text="程序名称"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:id="@+id/tv_pwd"
+        android:hint="请输入程序锁密码。。。"/>
+    <Button
+        android:layout_gravity="center"
+        android:onClick="confirm"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_selector"
+        android:layout_width="200dip"
+        android:textSize="20sp"
+        android:layout_height="45dp"
+        android:text="确定" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobilesafe.MobileGuardSet4">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:alpha="0.65"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="4.开启设备管理权限"
+        android:textColor="#000000"
+        android:textSize="25sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:text="激活设备管理权限"
+        android:onClick="adminActive"
+        android:background="@drawable/bt_selector"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:text="开启设备管理权限您将可以远程锁屏(锁屏密码为手机防盗密码），远程清除sd卡数据，恢复出厂设置， 保证您的数据安全。强烈建议您开启。开启该功能后您将不能卸载本应用程序，如果您要卸载，可以去设置中心卸载。"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind" />
+
+
+        <Button
+            style="@style/button_pre_style"
+            android:onClick="previous"
+            android:background="@drawable/bt_selector"
+            />
+
+        <Button
+            style="@style/button_next_style"
+            android:background="@drawable/bt_selector"
+            android:onClick="next"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobilesafe.NumberAddressQuaryActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手机号码归属地查询"
+        android:textSize="35sp"
+        android:background="@android:color/holo_blue_bright"
+        android:alpha="0.65"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneNumber"
+        android:textColor="#000000"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textSize="22sp"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:hint="请输入手机号码"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="查询"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowColor="#000000"
+        android:background="@drawable/bt_selector"
+        android:onClick="query"
+        android:textSize="18sp"
+        android:textColor="#000000"/>
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:id="@+id/phoneNumberAddress"/>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phoneaddress" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

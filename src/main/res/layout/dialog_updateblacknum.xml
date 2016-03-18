@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="修改拦截模式"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_blackNum"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:text="电话号码"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/cb_phone"
+            android:layout_marginLeft="15dp"
+            android:text="电话拦截"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="短信拦截"
+            android:textSize="15sp"
+            android:id="@+id/cb_sms"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="140dip"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_selector"
+            android:text="好了"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="140dip"
+            android:layout_height="38dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/bt_selector"
+            android:text="算了"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

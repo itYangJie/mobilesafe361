@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobilesafe.MobileGuardActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.65"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="手机防盗"
+        android:textSize="35sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dip"
+            android:text="安全号码"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="8dip"
+            android:textColor="#000000"
+            android:id="@+id/secPhoneNum"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dip"
+        android:layout_marginTop="10dip"
+        android:background="#44000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guard"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dip"
+            android:id="@+id/useGuard"
+            android:text="防盗保护未开启"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:id="@+id/useGuardImg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="8dip"
+            android:src="@drawable/unlock"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dip"
+        android:layout_marginTop="10dip"
+        android:background="#44000000" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="8dip"
+        android:background="@android:color/background_light"
+        android:clickable="true"
+        android:onClick="reEnterSetup"
+        android:text="点击进入设置向导"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dip"
+        android:layout_marginTop="5dip"
+        android:background="#44000000" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="8dip"
+        android:background="#44000000"
+        android:text="功能简介"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="一旦您的手机丢失，安全号码可以发送短信"
+        android:textSize="18sp"/>
+
+    <TextView
+        style="@style/text_content_style"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="GPS追踪:#*location*#" />
+
+    <TextView
+        style="@style/text_content_style"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="播放报警音乐：#*alarm*#" />
+
+
+    <TextView
+        style="@style/text_content_style"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="远程数据销毁:#*wipedata*#" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="5dp"
+        android:text="    请你谨慎使用，数据一旦销毁不可还原，不到万不得已请不要使用。"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind" />
+    </RelativeLayout>
+</LinearLayout>

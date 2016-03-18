@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobilesafe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.access_mock_location" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="ANDROID.PERMISSION.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.launcher2.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WIFI_STATE_CHANGED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/luncher361"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".SeettingCenterActivity"
+            android:label="@string/title_activity_seetting_center" />
+        <activity
+            android:name=".MobileGuardActivity"
+            android:label="@string/title_activity_mobile_guard" />
+        <activity
+            android:name=".MobileGuardSet1"
+            android:label="@string/title_activity_mobile_guard_set1" />
+        <activity
+            android:name=".MobileGuardSet2"
+            android:label="@string/title_activity_mobile_guard_set2" />
+        <activity
+            android:name=".MobileGuardSet3"
+            android:label="@string/title_activity_mobile_guard_activity3" />
+        <activity
+            android:name=".MobileGuardSet5"
+            android:label="@string/title_activity_mobile_guard_set4" />
+        <activity
+            android:name=".ModifyPasswordActivity"
+            android:label="@string/title_activity_modify_password" />
+
+        <receiver
+            android:name="com.receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".SelectContactActivity"
+            android:label="@string/title_activity_select_contact" />
+
+        <receiver
+            android:name="com.receiver.SmsListenReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.receiver.MyAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.receiver.MyWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <service
+            android:name="com.service.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MobileGuardSet4"
+            android:label="@string/title_activity_mobile_guard_set4" />
+        <activity
+            android:name=".HighToolActivity"
+            android:label="@string/title_activity_high_tool" />
+        <activity
+            android:name=".NumberAddressQuaryActivity"
+            android:label="@string/title_activity_number_address_quary" />
+
+        <service
+            android:name="com.service.NumberAddressShowService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ContactSafeActivity"
+            android:label="@string/title_activity_contact_safe" />
+
+        <service
+            android:name="com.service.BlackNumStopService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".AppManagerActivity"
+            android:label="@string/title_activity_app_manager" />
+        <activity
+            android:name=".ProcessManagerActivity"
+            android:label="@string/title_activity_process_manager" />
+        <activity
+            android:name=".ProcessSettingActivity"
+            android:label="@string/title_activity_process_setting" />
+
+        <service
+            android:name="com.service.AutoCleanService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.service.WidgetService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.receiver.KillAllReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.mobilesafe.killall" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.service.WatchDogService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".ModifyAppLockActivity"
+            android:label="@string/title_activity_modify_app_lock" >
+        </activity>
+        <activity
+            android:name=".AppLockEnterPwdActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_app_lock_enter_pwd"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".ScanVirusActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_scan_virus" >
+        </activity>
+        <activity
+            android:name=".CleanCacheActivity"
+            android:label="@string/title_activity_clean_cache" >
+        </activity>
+    </application>
+
+</manifest>
